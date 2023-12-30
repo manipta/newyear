@@ -3,37 +3,41 @@ card=document.querySelector(".card")
 top1=document.querySelector(".top1")
 top2=document.querySelector(".top2")
 wrap=document.querySelector(".wrap")
+var idealFontSize = 56, idealScreenSize = 1024,
+size = (window.screen.width / idealScreenSize) * idealFontSize;
+yy = (window.screen.width / idealScreenSize) * 80;
 function function1(){
     card.classList.remove("hidden");
-        card.classList.add("opencard");
-        setTimeout(()=>{
+    setTimeout(()=>{
         document.body.style.backgroundImage="url('img1.gif')";
         document.body.style.backgroundSize="cover";},12000);
+        card.classList.add("opencard");
         var vara=new Vara(".text","SatisfySL.json",[
         {
             text:"Wishing You and Your Family...",
-            y:150,
+            y:yy,
+            // x:50,
             fromCurrentPosition:{y:false,},
             duration:3000,
             delay:500,
         },
         {
             text:"A very very...",
-            y:150,
+            y:yy,
             fromCurrentPosition:{y:false,},
             duration:2000,
             delay:2000,
         },
         {
             text:"very....",
-            y:150,
+            y:yy,
             fromCurrentPosition:{y:false,},
             duration:1000,
             delay:1000,
         },
         {   
             text:"Happy New Year",
-            y:150,
+            y:yy,
             fromCurrentPosition:{y:false,},
             duration:300,
             delay:2000,
@@ -41,27 +45,27 @@ function function1(){
         {
             text:"It's 2024",
             fromCurrentPosition:{y:false,},
-            y:150,
+            y:yy,
             duration:2000,
             delay:2000,
         },
         {
             text:"Let's Share Happiness with Everyone!",
             fromCurrentPosition:{y:false,},
-            y:150,
+            y:yy,
             duration:3000,
             delay:1000,
         },
         {
             text:"Thank You!",
             fromCurrentPosition:{y:false,},
-            y:150,
+            y:yy,
             duration:3000,
             delay:1000,
         }
         
         ],{
-            fontSize:46,
+            fontSize:size,
             strokeWidth:2,
             color: "#fff",
             textAlign:"center"
